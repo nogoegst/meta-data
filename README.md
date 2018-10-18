@@ -105,7 +105,8 @@ Use the following steps to run
 		server "meta-data" {
 			listen on 169.254.169.254 port 80
 			fastcgi socket "/run/httpd.sock"
-			root { "/", strip 1 }
+			root "/"
+			request strip 1
 		}
 
 # ATTRIBUTES
@@ -236,4 +237,4 @@ vmd(8)
 
 Reyk Floeter &lt;[reyk@openbsd.org](mailto:reyk@openbsd.org)&gt;
 
-OpenBSD 6.1 - June 30, 2017
+OpenBSD 6.4 - October 18, 2018
